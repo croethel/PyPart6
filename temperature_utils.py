@@ -10,7 +10,7 @@ def convert_to_celsius(fahrenheit_temp: float) -> float:
     """
     celsius_temp = (fahrenheit_temp - 32) / 1.8
     celsius_float = round(celsius_temp, 2)
-    return float(celsius_float)
+    return celsius_float
 
 def convert_to_fahrenheit(celsius_temp: float) -> int:
     """
