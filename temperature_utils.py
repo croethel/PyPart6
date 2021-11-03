@@ -9,7 +9,8 @@ def convert_to_celsius(fahrenheit_temp: float) -> float:
     :return: A float representing the corresponding value of the fahrenheit_temp parameter in celsius
     """
     celsius_temp = (fahrenheit_temp - 32) / 1.8
-    return float(celsius_temp)
+    celsius_float = round(celsius_temp, 2)
+    return float(celsius_float)
 
 def convert_to_fahrenheit(celsius_temp: float) -> int:
     """
