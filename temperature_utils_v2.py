@@ -52,7 +52,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
             inside_tuple = (temp_to_covert, coverted_temp)
             result.append(inside_tuple)
         elif input_unit_of_measurement == "k":
-            coverted_temp = covert_to_kelvin(temp_to_covert)
+            coverted_temp = covert_from_kelvin(temp_to_covert)
             inside_tuple = (temp_to_covert, coverted_temp)
             result.append(inside_tuple)
 
