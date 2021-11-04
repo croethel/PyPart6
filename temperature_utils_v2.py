@@ -23,15 +23,10 @@ def convert_to_fahrenheit(celsius_temp: float) -> int:
     return int(fahrenheit_temp)
 
 
-def covert_to_kelvin(celsius_temp: int) -> float:
-    """
-    Given a float representing a temperature in celsius, return the corresponding value in kelvin.
-
-    :param celsius_temp: A int representing a temperature in celsius
-    :return:  A float representing the corresponding value of the kelvin_temp parameter in kelvin
-    """
-    kelvin_temp = (celsius_temp + 273.15)
-    return float(kelvin_temp)
+def covert_from_kelvin(kelvin_temp):
+    kelvin_to_celsius = round(kelvin_temp - 273.15)
+    kelvin_to_fahrenheit = round(convert_to_fahrenheit(kelvin_to_celsius))
+    return kelvin_to_celsius, kelvin_to_fahrenheit
 
 
 
@@ -56,7 +51,7 @@ def temperature_tuple(temperatures: Iterable, input_unit_of_measurement: str) ->
             coverted_temp = convert_to_fahrenheit(temp_to_covert)
             inside_tuple = (temp_to_covert, coverted_temp)
             result.append(inside_tuple)
-        elif input_unit_of_measurement == "a":
+        elif input_unit_of_measurement == "k":
             coverted_temp = covert_to_kelvin(temp_to_covert)
             inside_tuple = (temp_to_covert, coverted_temp)
             result.append(inside_tuple)
